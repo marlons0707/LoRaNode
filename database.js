@@ -1,11 +1,5 @@
-// CONECTION
-const mongoose = require('mongoose');
 const Door = require('./models/Door');
 const TempHum = require('./models/Temperature');
-
-mongoose.connect('mongodb://localhost/lora_ttn')
-.then(()=> console.info('[INFO] ', 'Conectado a MongoDB'))
-.catch((e)=> console.log('Error de conexión ' + e))
 
 // SAVE DOOR ACTION
 const saveDoorAction = async (args)=> {
